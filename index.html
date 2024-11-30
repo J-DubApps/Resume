@@ -4,6 +4,16 @@
  │ @description  Resume CV with dark/light mode and PDF export, leveraging https://github.com/LeaG76/cv-generator   │
  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 -->
+  <style type="text/css">
+        .e-mail:before {
+            display: flex;
+            align-items: center;
+            font-size: var(--small-font-size);
+            content: attr(data-website) "\0040" attr(data-user);
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+    </style>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -120,8 +130,8 @@
                                     <i class="fa-solid fa-location-dot home_icon"></i> Richardson, Texas - USA
                                 </span>
                                 <span class="home_information">
-                                    <a href="mailto:west.julian@gmail.com" class="home_link">
-                                        <i class="fa-solid fa-envelope home_icon"></i> west.julian@gmail.com
+                                    <a href="mailto:%77%65%73%74%2E%6A%75%6C%69%61%6E%40%67%6D%61%69%6C%2E%63%6F%6D" class="home_link">
+                                        <i class="fa-solid fa-envelope home_icon"></i>  <i class="e-mail" data-user="nailuj.tsew" data-website="moc.liamg"></i>
                                     </a>
                                 </span>
                                 <span class="home_information">
