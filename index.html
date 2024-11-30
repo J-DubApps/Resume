@@ -16,7 +16,7 @@
     </style>
      <style type="text/css">
         .phone-number:before {
-            content: "(" attr(data-area) ") " attr(data-prefix) "-" attr(data-line);
+            content: attr(data-line) "-"  attr(data-prefix) " " "(" attr(data-area) ") " ;
             unicode-bidi: bidi-override;
             direction: rtl;
         }
@@ -144,7 +144,7 @@
                                 </span>
                                 <span class="home_information">
                                     <a href="tel:%28%39%37%32%29%20%35%30%36%2D%39%36%38%35" class="home_link">
-                                        <i class="fa-solid fa-phone home_icon"></i> <i class="phone-number" data-area="279" data-prefix="605" data-line="5869"  ></i>
+                                        <i class="fa-solid fa-phone home_icon"></i> <i class="phone-number" data-area="279" data-prefix="605" data-line="5869"></i>
                                     </a>
                                 </span>
                             </div>
