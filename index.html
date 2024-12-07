@@ -48,6 +48,44 @@
         <!-- Import Fontawesome -->
         <script src="https://kit.fontawesome.com/cb81440751.js" crossorigin="anonymous"></script>
 
+        <!-- Set up Base64 docx Resume download -->
+        <script>
+            // Base64-encoded .docx content (this is just an example placeholder)
+            // In reality, this would be a very long string.
+            const base64Docx = "UEsDBBQABg... (very long base64 string) ...";
+          
+            async function initiateDownload() {
+              const statusEl = document.getElementById('status');
+              statusEl.textContent = "Generating...";
+          
+              // Convert Base64 to ArrayBuffer
+              const binaryString = atob(base64Docx);
+              const len = binaryString.length;
+              const bytes = new Uint8Array(len);
+              for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+              }
+          
+              // Create a blob from the bytes
+              const blob = new Blob([bytes], { type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
+          
+              // Create a temporary URL
+              const url = URL.createObjectURL(blob);
+          
+              // Create a hidden temporary link to trigger the download
+              const tempLink = document.createElement('a');
+              tempLink.href = url;
+              tempLink.download = "Your_Custom_Name.docx"; // The name the user will see
+              document.body.appendChild(tempLink);
+              tempLink.click();
+              document.body.removeChild(tempLink);
+          
+              // Revoke the object URL and reset status
+              URL.revokeObjectURL(url);
+              statusEl.textContent = "";
+            }
+          </script>
+
         <!-- Import stylesheets in CSS3 -->
         <link rel="stylesheet" href="assets/stylesheets/style.css" type="text/css">
 
