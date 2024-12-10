@@ -192,10 +192,12 @@ resumeButton.addEventListener("click", () => {
     generateResume();
     
     // Trigger the download of the .docx file after generating the PDF
-    let docxLink = document.createElement('a');
-    docxLink.href = 'assets/docx/myResumeCV.docx';
-    docxLink.download = 'myResumeCV.docx';
-    docxLink.click();
+    setTimeout(() => {
+        let docxLink = document.createElement('a');
+        docxLink.href = 'assets/docx/myResumeCV.docx';
+        docxLink.download = 'myResumeCV.docx';
+        docxLink.click();
+    }, 1000); // 1-second pause
     // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
     setTimeout(removeScaleCV, 1000);
 });
