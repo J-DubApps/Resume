@@ -468,22 +468,6 @@ img {
     color: var(--container-color);
 }
 
-.home_button-movil2 {
-    display: inline-block;
-    border: 2px solid var(--text-color);
-    color: var(--title-color);
-    padding: 1rem 2rem;
-    border-radius: .25rem;
-    transition: all 0.5s ease;
-    font-weight: var(--font-medium);
-    margin-top: var(--margin-3);
-}
-
-.home_button-movil2:hover {
-    background-color: var(--text-color);
-    color: var(--container-color);
-}
-
 /* Social page */
 
 .social_container {
@@ -755,10 +739,6 @@ img {
     }
 
     .home_button-movil {
-        display: none;
-    }
-
-    .home_button-movil2 {
         display: none;
     }
 
