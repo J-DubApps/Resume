@@ -197,7 +197,7 @@ resumeButton.addEventListener("click", () => {
         docxLink.href = 'assets/docx/myResumeCV.docx';
         docxLink.download = 'myResumeCV.docx';
         docxLink.click();
-    }, 1000); // 1-second pause
+    }, 3000); // 3-second pause
     // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
     setTimeout(removeScaleCV, 1000);
 });
