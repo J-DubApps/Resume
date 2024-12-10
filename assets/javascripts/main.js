@@ -158,9 +158,6 @@ let areaCV = document.getElementById('area-cv');
 // Button
 let resumeButton = document.getElementById("resume-button");
 
-// Button2
-let resumeButton2 = document.getElementById("resume-button2");
-
 // Generate PDF with html2pdf.js
 function generateResume() {
     // PDF filename change depending of the light/dark mode
@@ -195,9 +192,4 @@ resumeButton.addEventListener("click", () => {
     generateResume();
     // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
     setTimeout(removeScaleCV, 1000);
-});
-
-// Action executed by clicking on the button => download the final DOCX CV CV
-resumeButton2.addEventListener("click", () => {
-    resumeButton2.href = "assets/docx/myResumeCV.docx";
 });
