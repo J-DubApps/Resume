@@ -126,6 +126,18 @@ downloadButton.addEventListener('click', () => {
     }
 });
 
+/* Link PDF Download on Mobile screen depending of the light/dark mode */
+
+const downloadButton2 = document.getElementById('download-button2');
+
+downloadButton2.addEventListener('click', () => {
+    if (document.body.classList.contains(darkTheme)) {
+        downloadButton2.href = "assets/docx/myResumeCV.docx";
+    } else {
+        downloadButton2.href = "assets/docx/myResumeCV.docx";
+    }
+});
+
 /* Reduce the size and print on an A4 sheet */
 
 function addScaleCV() {
