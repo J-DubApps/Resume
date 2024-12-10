@@ -126,6 +126,18 @@ downloadButton.addEventListener('click', () => {
     }
 });
 
+/* Link PDF Download on Mobile screen depending of the light/dark mode */
+
+const downloadButton2 = document.getElementById('download-button2');
+
+downloadButton2.addEventListener('click', () => {
+    if (document.body.classList.contains(darkTheme)) {
+        downloadButton2.href = "assets/docx/myResumeCV.docx";
+    } else {
+        downloadButton2.href = "assets/docx/myResumeCV.docx";
+    }
+});
+
 /* Reduce the size and print on an A4 sheet */
 
 function addScaleCV() {
@@ -178,6 +190,12 @@ resumeButton.addEventListener("click", () => {
     addScaleCV();
     // Generate the PDF
     generateResume();
+    
+    // Trigger the download of the .docx file after generating the PDF
+    let docxLink = document.createElement('a');
+    docxLink.href = 'assets/docx/myResumeCV.docx';
+    docxLink.download = 'myResumeCV.docx';
+    docxLink.click();
     // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
     setTimeout(removeScaleCV, 1000);
 });

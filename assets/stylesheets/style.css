@@ -92,22 +92,6 @@ body.dark-theme {
     color: var(--title-color);
 }
 
-/* Generate DOCX Button */
-
-.generate-docx {
-    display: none;
-    position: absolute;
-    left: 5;
-    top: 2.5rem;
-    color: var(--text-color);
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-.generate-docx:hover {
-    color: var(--title-color);
-}
-
 /* Scale CV */
 
 body.scale-cv {
