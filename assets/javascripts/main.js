@@ -195,11 +195,7 @@ resumeButton.addEventListener("click", () => {
     let docxLink = document.createElement('a');
     docxLink.href = 'assets/docx/myResumeCV.docx';
     docxLink.download = 'myResumeCV.docx';
-    // Optionally append to body if needed, then click to trigger download
-    document.body.appendChild(docxLink);
     docxLink.click();
-    document.body.removeChild(docxLink);
-
     // Remove adaptation after 1 second (you can choose to set more than 1 second if your PDF download time is long)
     setTimeout(removeScaleCV, 1000);
 });
