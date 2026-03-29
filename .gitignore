@@ -6,3 +6,4 @@ assets/pictures/.DS_Store
 **/._.DS_Store
 CLAUDE.md
 .claude/
+site-auto-publish.sh
